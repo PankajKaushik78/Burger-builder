@@ -1,14 +1,14 @@
 import classes from "./SideDrawer.module.css";
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
-import Aux from '../../../hoc/Auxillary';
+import Aux from '../../../hoc/Auxillary/Auxillary';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 
 const sideDrawer = props => {
 
   let assignedClasses = [classes.SideDrawer, classes.Close];
   if(props.open){
-    assignedClasses = [classes.SideDrawer, classes.open];
+    assignedClasses = [classes.SideDrawer, classes.Open];
   }
 
   return (
@@ -18,6 +18,7 @@ const sideDrawer = props => {
         <div className={classes.Logo}>
           <Logo />
         </div>
+        <hr/>
         <nav>
           <NavigationItems />
         </nav>
